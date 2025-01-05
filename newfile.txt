@@ -1,1 +1,2 @@
-Test file
+Test file was created on my laptop and pushed on to remote.
+Now let's edit testfile by writing this sentence, commiting it directly on GitHub's website, and fetching changes.
