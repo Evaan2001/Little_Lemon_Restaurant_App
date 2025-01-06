@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { validateName, validateEmail } from '../utils';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import LoadingScreen from './Loading';
+import { Context } from '../App';
 
 import {
     Platform,
@@ -21,14 +22,17 @@ export default function Onboarding({ navigation }) {
     const [validInfo, setValidInfo] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
+    const { userData, setUserData } = React.useContext(Context);
+
     const saveInfo = async () => {
         try {
             setIsLoading(true)
             await AsyncStorage.setItem('name', name);
             await AsyncStorage.setItem('email', email);
+            setUserData({ name, email });
         } catch (error) {
             console.error('Error saving data:', error);
-        } finally{
+        } finally {
             setIsLoading(false)
         }
 
@@ -79,7 +83,13 @@ export default function Onboarding({ navigation }) {
                 </Pressable>}
 
                 {validInfo && <Pressable
-                    onPress={async () => { await saveInfo(); navigation.navigate("Home"); }}
+                    onPress={async () => {
+                        await saveInfo();
+                        navigation.reset({
+                            index: 0,
+                            routes: [{ name: 'Home' }],
+                        });
+                    }}
                     style={styles.activeButton}
                 >
                     <Text style={styles.activeButtonText}>Next</Text>
