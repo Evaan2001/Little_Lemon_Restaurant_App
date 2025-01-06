@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { View, SafeAreaView, Text, StatusBar, StyleSheet } from 'react-native';
+import { View, SafeAreaView, Image, Text, StatusBar, StyleSheet } from 'react-native';
 
 export default function LittleLemonHeader() {
   return (
     <>
-      <StatusBar backgroundColor="#EE9972" barStyle="light-content" />
-      <SafeAreaView backgroundColor="#EE9972">
+      <StatusBar style={styles.statusBar} />
+      <SafeAreaView style={styles.safeArea}>
         <View style={styles.container}>
-          <Text style={styles.headerText}>Little Lemon</Text>
+          <Image
+            style={styles.image}
+            source={require('../assets/img/Logo.png')} />
         </View>
       </SafeAreaView>
     </>
@@ -15,14 +17,22 @@ export default function LittleLemonHeader() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#EE9972',
+  statusBar: {
+    backgroundColor: "#ebe8df",
+    barStyle: "dark-content"
   },
-  headerText: {
-    paddingBottom: 15,
-    paddingHorizontal: 20,
-    fontSize: 30,
-    color: 'black',
-    textAlign: 'center',
+  safeArea: {
+    backgroundColor: "#ebe8df",
+  },
+  container: {
+    paddingVertical: 15,
+    backgroundColor: '#ebe8df',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    height: 50,
+    resizeMode: 'cover',
+    // backgroundColor: '#ebe8df',
   },
 });

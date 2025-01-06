@@ -6,7 +6,7 @@ export default function Welcome() {
       <View style={styles.headerWrapper}>
         <Image
           style={styles.image}
-          source={require('../assets/img/logo.png')}
+          source={require('../assets/img/Logo.png')}
           resizeMode="cover"
           accessible={true}
           accessibilityLabel={'Little Lemon Logo'}
