@@ -6,8 +6,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import LittleLemonHeader from '../components/LittleLemonHeader';
 import LittleLemonFooter from '../components/LittleLemonFooter';
-import WelcomeScreen from '../screens/WelcomeScreen';
-import LoginScreen from '../screens/LoginScreen';
+import WelcomeScreen from '../screens/Welcome';
+import LoginScreen from '../screens/Login';
+import OnboardingScreen from '../screens/Onboarding';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Stack = createStackNavigator();
@@ -16,11 +17,12 @@ export default function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Welcome"
+        initialRouteName="Oboarding"
         screenOptions={{
           header: () => <LittleLemonHeader />
         }}
       >
+        <Stack.Screen name="Oboarding" component={LoginScreen} />
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>

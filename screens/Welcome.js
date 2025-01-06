@@ -1,6 +1,6 @@
 import { ScrollView, View, Text, StyleSheet, Image } from 'react-native';
 
-export default function WelcomeScreen() {
+export default function Welcome() {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.headerWrapper}>
