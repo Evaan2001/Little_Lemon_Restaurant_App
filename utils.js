@@ -9,3 +9,17 @@ export const validateEmail = (email) => {
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
 };
+
+export const validateNumber = (number) => {
+    if (!number) return true; // Phone number is optional
+
+    // Matches these formats:
+    // (123) 456-7890
+    // (123)456-7890
+    // 123-456-7890
+    // 1234567890
+    // +1 123-456-7890
+    // +1 (123) 456-7890
+    const phoneRegex = /^(\+1\s?)?((\([0-9]{3}\))|[0-9]{3})[-. ]?[0-9]{3}[-. ]?[0-9]{4}$/;
+    return phoneRegex.test(number);
+};

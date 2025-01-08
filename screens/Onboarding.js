@@ -18,7 +18,7 @@ import {
 
 export default function Onboarding({ navigation }) {
     const [email, onChangeEmail] = useState('');
-    const [name, onChangeName] = useState('');
+    const [firstName, onChangeFirstName] = useState('');
     const [validInfo, setValidInfo] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -27,11 +27,15 @@ export default function Onboarding({ navigation }) {
     const saveInfo = async () => {
         try {
             setIsLoading(true)
-            await AsyncStorage.setItem('name', name);
+            await AsyncStorage.setItem('firstName', firstName);
             await AsyncStorage.setItem('email', email);
-            setUserData({ name, email });
+            setUserData(prevData => ({
+                ...prevData,
+                firstName,
+                email
+            }));
         } catch (error) {
-            console.error('Error saving data:', error);
+            console.error('Error saving firstName and email:', error);
         } finally {
             setIsLoading(false)
         }
@@ -39,8 +43,8 @@ export default function Onboarding({ navigation }) {
     }
 
     useEffect(() => {
-        setValidInfo(validateName(name) && validateEmail(email));
-    }, [email, name]);
+        setValidInfo(validateName(firstName) && validateEmail(email));
+    }, [email, firstName]);
 
     return (
         <KeyboardAvoidingView
@@ -60,8 +64,8 @@ export default function Onboarding({ navigation }) {
                     <Text style={styles.regularText}>First Name</Text>
                     <TextInput
                         style={styles.inputBox}
-                        value={name}
-                        onChangeText={onChangeName}
+                        value={firstName}
+                        onChangeText={onChangeFirstName}
                         placeholder={'What do you go by'}
                         keyboardType={'default'}
                     />
