@@ -20,7 +20,7 @@ export default function Welcome({ route, navigation }) {
         <Text style={styles.headerText}>Little Lemon</Text>
       </View>
       <Text style={styles.regularText}>
-        Hello {userData.name}! Is {userData.email} still your email?
+        Hello {userData.firstName}! Is {userData.email} still your email?
         Little Lemon is a charming neighborhood bistro that serves simple food
         and classic cocktails in a lively but casual environment. We would love
         to hear your experience with us!
