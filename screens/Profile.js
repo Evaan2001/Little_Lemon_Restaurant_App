@@ -190,8 +190,11 @@ export default function Profile({ route, navigation }) {
     }
 
     return (
-        <ScrollView style={styles.scrollContainer}>
-            <View style={styles.container}>
+        <KeyboardAvoidingView style={styles.scrollContainer}
+            behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+            keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+        >
+            <ScrollView style={styles.container}>
                 <Text style={styles.sectionHeading}>Personal Information</Text>
 
                 {/* Top Row With Profile Pic  */}
@@ -277,14 +280,7 @@ export default function Profile({ route, navigation }) {
                     </View>
                 ))}
 
-                <Pressable
-                    style={styles.logoutButton}
-                    onPress={handleLogOut}
-                >
-                    <Text style={styles.logoutButtonText}>Log Out</Text>
-                </Pressable>
-
-                <View style={styles.buttonRow}>
+                <View style={[styles.buttonRow, { marginTop: 5 }]}>
                     <Pressable
                         onPress={discardChanges}
                         style={styles.hollowGreenButton}
@@ -299,8 +295,15 @@ export default function Profile({ route, navigation }) {
                         <Text style={styles.solidGreenButtonText}>Save Changes</Text>
                     </Pressable>
                 </View>
-            </View>
-        </ScrollView>
+
+                <Pressable
+                    style={[styles.logoutButton, { marginTop: 17 }]}
+                    onPress={handleLogOut}
+                >
+                    <Text style={styles.logoutButtonText}>Log Out</Text>
+                </Pressable>
+            </ScrollView>
+        </KeyboardAvoidingView>
     )
 }
 
@@ -315,12 +318,12 @@ const windowWidth = Dimensions.get('window').width;
 const styles = StyleSheet.create({
     scrollContainer: {
         flex: 1,
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
     container: {
         flex: 1,
         padding: '5%',
-        alignItems: 'center',
-        justifyContent: 'space-between',
     },
     h2heading: {
         alignSelf: 'flex-start',
@@ -331,7 +334,6 @@ const styles = StyleSheet.create({
         alignSelf: 'flex-start',
         fontSize: 18,
         fontWeight: 'bold',
-        marginTop: 20,
         marginBottom: 10,
     },
     profilePic: {
@@ -393,7 +395,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 10,
         width: '100%',
-        marginTop: 20,
+        marginTop: 5,
     },
     logoutButtonText: {
         color: 'black',
@@ -404,8 +406,7 @@ const styles = StyleSheet.create({
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        alignItems: 'center',  
-        marginTop: 20,
+        alignItems: 'center',
         gap: 10,
     },
     solidGreenButton: {
