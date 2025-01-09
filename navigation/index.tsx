@@ -7,7 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import LittleLemonHeader from '../components/LittleLemonHeader';
 import LittleLemonFooter from '../components/LittleLemonFooter';
-import WelcomeScreen from '../screens/Welcome';
+import HomeScreen from '../screens/Home';
 import OnboardingScreen from '../screens/Onboarding';
 import ProfileScreen from '../screens/Profile';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -35,7 +35,7 @@ export default function RootStack({ isLoggedIn }: RootStackProps) {
           headerBackTitle: 'Back',  // Forces "Back" text
         }}
       >
-        <Stack.Screen name="Home" component={WelcomeScreen} />
+        <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Onboarding" component={OnboardingScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
