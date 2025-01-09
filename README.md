@@ -1,4 +1,4 @@
-# little-lemon
+# The Little Lemon App
 Capstone for Meta's React Specialization (Coursera)
 
 Video Preview of the app:
