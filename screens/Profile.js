@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { validateName, validateEmail, validateNumber } from '../utils';
+import { validateName, validateEmail, validateNumber, generateProfilePic } from '../utils';
 import { Context } from '../App';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
@@ -199,23 +199,7 @@ export default function Profile({ route, navigation }) {
 
                 {/* Top Row With Profile Pic  */}
                 <View style={styles.buttonRow}>
-                    {localProfilePicture === DEFAULT_PROFILE_PICTURE &&
-                        <Avatar
-                            rounded
-                            title={localFirstName.charAt(0) + (localLastName?.charAt(0) || '')}
-                            containerStyle={{
-                                backgroundColor: "#62D5C4",
-                                width: 75,
-                                height: 75,
-                                borderRadius: 75 / 2,
-                            }}
-                        />}
-
-                    {localProfilePicture !== DEFAULT_PROFILE_PICTURE &&
-                        <Image
-                            source={{ uri: localProfilePicture }}
-                            style={styles.profilePic}
-                        />}
+                    {generateProfilePic(localProfilePicture, localFirstName, localLastName, DEFAULT_PROFILE_PICTURE)}
 
                     <Pressable
                         onPress={changePic}
