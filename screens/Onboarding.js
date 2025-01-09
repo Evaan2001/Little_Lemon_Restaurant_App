@@ -13,8 +13,11 @@ import {
     StyleSheet,
     TextInput,
     Pressable,
-    KeyboardAvoidingView
+    KeyboardAvoidingView,
+    Image
 } from 'react-native';
+
+const welcomeMessage = 'We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist'
 
 export default function Onboarding({ navigation }) {
     const [email, onChangeEmail] = useState('');
@@ -59,6 +62,22 @@ export default function Onboarding({ navigation }) {
             >
 
                 <Text style={styles.H1Text}>Let us get to know you</Text>
+
+                <View style={styles.heroSection}>
+                    <Text style={styles.heroH1}>Little Lemon</Text>
+                    <View style={styles.heroInnerContainer}>
+                        <View style={styles.heroTextContainer}>
+                            <Text style={styles.heroH2}>Chicago</Text>
+                            <Text style={styles.heroText}>{welcomeMessage} </Text>
+                        </View>
+                        <Image
+                            source={require('../assets/img/Hero image.png')}
+                            style={styles.heroImage}
+                            resizeMode="stretch"
+                        />
+                    </View>
+                </View>
+
                 <View style={{ paddingVertical: 30 }}>
 
                     <Text style={styles.regularText}>First Name</Text>
@@ -109,6 +128,7 @@ const cream = '#ebe8df'
 const green = '#4A5E57'
 const darkerGreen = '#384742'
 const lightGrey = '#c2bebe'
+const yellow = "#F4CD14"
 
 const styles = StyleSheet.create({
     container: {
@@ -126,6 +146,51 @@ const styles = StyleSheet.create({
         color: 'black',
         textAlign: 'center',
         fontFamily: 'MarkaziText-Regular',
+    },
+    heroSection: {
+        minHeight: 200,
+        width: '100%',
+        padding: '8%',
+        backgroundColor: green,
+    },
+    heroH1: {
+        color: yellow,
+        fontSize: 40,
+        fontWeight: 'bold',
+        fontFamily: '../assets/fonts/Karla-Regular',
+        paddingBottom: '3%',
+    },
+    heroH2: {
+        color: cream,
+        fontSize: 30,
+        fontWeight: 'bold',
+        fontFamily: '../assets/fonts/MarkaziText-Regular',
+    },
+    heroInnerContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-start', // Align items to top
+        flex: 1, // Take up available space
+    },
+    heroTextContainer: {
+        flex: 1,
+        paddingRight: 16,
+        justifyContent: 'space-between',
+    },
+    heroText: {
+        color: 'white',
+        fontSize: 17,
+        fontFamily: '../assets/fonts/Karla-Regular',
+        paddingTop: '5%',
+        paddingBottom: '2%',
+        paddingRight: '5%',
+    },
+    heroImage: {
+        width: 100,
+        aspectRatio: 2 / 3, // Instead of fixed height
+        borderRadius: 8,
+        flex: 0, // Remove flex to prevent stretching
+        alignSelf: 'center'
     },
     regularText: {
         fontSize: 24,

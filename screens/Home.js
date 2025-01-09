@@ -1,16 +1,11 @@
 import React, { useState, useEffect, useContext } from 'react';
 import {
-    KeyboardAvoidingView,
-    ScrollView,
     View,
     Text,
     StyleSheet,
     Platform,
     Pressable,
     Image,
-    ViewStyle,
-    StatusBar,
-    SafeAreaView,
     FlatList
 } from 'react-native';
 
@@ -48,7 +43,7 @@ export default function Home({ navigation }) {
 
     const API_URL = 'https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/capstone.json'
 
-    let welcomeMessage = 'We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist'
+    const welcomeMessage = 'We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist'
 
     const removeCategoryFromQuery = (category) => {
         setQuery(query.filter(item => item !== category))
@@ -259,9 +254,7 @@ export default function Home({ navigation }) {
 const cream = '#ebe8df'
 const green = '#4A5E57'
 const darkerGreen = '#384742'
-const lightGrey = '#c2bebe'
 const yellow = "#F4CD14"
-const orange = "#F75B02"
 
 const styles = StyleSheet.create({
     container: {
