@@ -1,6 +1,3 @@
-# The Little Lemon App
-Capstone for Meta's React Specialization (Coursera)
-
 <p align="center">
 <img src="./assets/img/Logo.png" width="400"/>
 </p>
