@@ -1,7 +1,7 @@
-<p align="center">
-<img src="./assets/img/Logo.png" width="400"/>
-</p>
 <h1 align="center">Little Lemon Restaurant App</h1>
+<p align="center">
+<img src="./assets/img/Logo.png" width="200"/>
+</p>
 <h3 align="center">
 A React Native mobile application built as the capstone project for Meta's React Native Specialization on Coursera
 </h3>
