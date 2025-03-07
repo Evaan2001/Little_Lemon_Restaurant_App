@@ -168,18 +168,15 @@ Users can customize their profile with various options:
 - Restaurant menu data provided by Meta's sample API
 - UI/UX design inspired by the Little Lemon brand guidelines
 
-## Certificate
+## Certification & Credentials
 
-div align="center">
-  <img width="600" alt="Meta React Native Specialization Certificate" src="https://github.com/user-attachments/assets/c7002bd6-dd08-4b0f-a90e-8786e66b610e" />
+<div align="center">
+  <img width="400" alt="Meta React Native Specialization Certificate" src="https://github.com/user-attachments/assets/c7002bd6-dd08-4b0f-a90e-8786e66b610e" />
   <p>
     <a href="https://coursera.org/share/500884f3656eb7d5800ae36a558174ed">Verify this certification on Coursera</a>
   </p>
 </div>
 
-While below is a photo of the specialization certification alongside the link to Coursera's portal, I believe the true measure of my skillset lies in the quality and scalability of the solutions I deliver. Have a look at my linkedin or resume!
-<img width="655" alt="Screenshot 2025-03-07 at 4 57 41 PM" src="https://github.com/user-attachments/assets/c7002bd6-dd08-4b0f-a90e-8786e66b610e" />
-Link:
-https://coursera.org/share/500884f3656eb7d5800ae36a558174ed
+While this certificate demonstrates the formal completion of Meta's React Native Specialization, I believe the true measure of my skillset lies in the quality and scalability of the solutions I deliver. Have a look at my linkedin or resume!
 
 
