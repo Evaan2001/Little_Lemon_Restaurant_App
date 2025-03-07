@@ -177,6 +177,6 @@ Users can customize their profile with various options:
   </p>
 </div>
 
-While this certificate demonstrates the formal completion of Meta's React Native Specialization, I believe the true measure of my skillset lies in the quality and scalability of the solutions I deliver. Have a look at my linkedin or resume!
+While this certificate demonstrates the formal completion of Meta's React Native Specialization, I believe the true measure of my skillset lies in the quality and scalability of the solutions I deliver. Have a look at my [LinkedIn](https://www.linkedin.com/in/evaan/)!
 
 
