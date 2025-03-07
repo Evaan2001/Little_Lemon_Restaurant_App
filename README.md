@@ -9,9 +9,9 @@ Capstone for Meta's React Specialization (Coursera)
 A React Native mobile application built as the capstone project for Meta's React Native Specialization on Coursera
 </h3>
 <p align="center">
-  Video Preview of the app:
-  https://github.com/user-attachments/assets/2ce0948a-e9ee-4380-8c9a-8e9030b00f46
+<img src="https://github.com/user-attachments/assets/2ce0948a-e9ee-4380-8c9a-8e9030b00f46" width="300"/>
 </p>
 
+Video Preview of the app:
 
-
+https://github.com/user-attachments/assets/2ce0948a-e9ee-4380-8c9a-8e9030b00f46
