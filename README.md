@@ -1,4 +1,4 @@
-<h1 align="center">Little Lemon Restaurant App</h1>
+<h1 align="center"> The Little Lemon Restaurant App</h1>
 <p align="center">
 <img src="./assets/img/Logo.png" width="200"/>
 </p>
