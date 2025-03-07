@@ -20,6 +20,7 @@ This project was developed as the capstone for Meta's React Native Specializatio
 
 - **User Authentication**: Complete onboarding flow with user registration and login functionality
 - **Profile Management**: Users can update their personal information, including profile pictures and notification preferences
+- **API Integration**: Fetches restaurant menu data from a REST API endpoint
 - **Menu Browsing**: Dynamic menu display with images and descriptions of each dish
 - **Advanced Filtering**: Real-time filtering of menu items by category (starters, mains, desserts, drinks)
 - **Search Functionality**: Search capability to find specific dishes
@@ -31,7 +32,7 @@ This project was developed as the capstone for Meta's React Native Specializatio
 
 - **React Native**: Core framework for cross-platform mobile development
 - **Expo**: Development platform for building and deploying React Native applications
-- **TypeScript**: Type-safe JavaScript for improved code quality and developer experience
+- **TypeScript**: Type-safe JavaScript at critical areas for improved code quality and developer experience
 - **React Navigation**: Navigation library for implementing screen transitions and app structure
 - **SQLite**: Local database for storing and querying menu data
 - **Async Storage**: Persistent storage solution for user data and authentication state
@@ -160,28 +161,6 @@ Users can customize their profile with various options:
 ├── database.js          # SQLite database setup and queries
 └── utils.js             # Utility functions and helpers
 ```
-
-## Key Learnings
-
-Developing the Little Lemon App provided valuable experience in:
-
-1. **State Management**: Using Context API to manage global application state
-2. **Data Persistence**: Implementing AsyncStorage for user data and SQLite for menu items
-3. **Navigation Flows**: Building complex navigation patterns with conditional routing
-4. **Form Validation**: Creating robust validation for user input fields
-5. **Responsive Design**: Ensuring consistent UI/UX across different device sizes
-6. **Performance Optimization**: Efficiently loading and rendering data for smooth user experience
-
-## Future Enhancements
-
-Potential improvements for future versions:
-
-- Implement online ordering functionality
-- Add table reservation feature
-- Integrate with payment gateways
-- Implement push notifications for order updates
-- Add user reviews and ratings for menu items
-- Implement dark mode and additional accessibility features
 
 ## Acknowledgements
 
